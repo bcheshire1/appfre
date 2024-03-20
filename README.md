@@ -1,7 +1,24 @@
-## Robot Package Template
+## Autonomous Path Planning For Radioactive Environments (appfre) using the Bunker Mini robot by AgileX
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+Ensure you have ros2 installed as described in https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+You will also need to instal the SLAM toolbox, Nav2, and others
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+Clone this repo into the src directory of your colcon workspace
+```
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+```
+```
+git clone https://github.com/bcheshire1/bunker_mini.git
+```
+Build the package using colcon from the root of your workspace
+```
+cd ..
+```
+```
+colcon build --symlink-install
+```
+From the root of your workspace, run an example launch file
+```
+ros2 launch bunker_mini launch_nav2.launch.py world:=./src/bunker_mini/worlds/room.world
+```
