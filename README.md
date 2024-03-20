@@ -18,6 +18,10 @@ cd ..
 ```
 colcon build --symlink-install
 ```
+Source the workspace
+```
+source install/setup.bash
+```
 From the root of your workspace, run an example launch file
 ```
 ros2 launch bunker_mini launch_nav2.launch.py world:=./src/bunker_mini/worlds/room.world
