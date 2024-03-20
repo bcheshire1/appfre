@@ -1,5 +1,5 @@
 # File: explore.py
-# Author: [Author Name]
+# Author: graham [gjcliff@gmail.com]
 # Description: This file is a direct copy of the explore.py file from the SLAM-Frontier-Exploration repository
 # (https://github.com/gjcliff/SLAM-Frontier-Exploration.git).
 # 
