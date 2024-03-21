@@ -1,3 +1,12 @@
+# File: launch_nav2.launch.py
+# Author: Ben Cheshire
+# Date: 21/03/2024
+# Source: Josh Ewans (Articulated Robotics)
+# 
+# Description:
+# This launch file launches all relevant processes for the Bunker Mini robot in the appfre project
+# to the the navigation2 stack in Gazebo Classic simulation
+
 import os
 
 from ament_index_python.packages import get_package_share_directory

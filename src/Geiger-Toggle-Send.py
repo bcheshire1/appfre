@@ -1,3 +1,12 @@
+# File: Geiger-Toggle-Send.py
+# Author: Nathan Leadbetter
+# Date: 21/03/2024
+# Source: OpenAI ChatGPT
+# 
+# Description:
+# This file receives socket data from the PiGi module on a raspberry pi, and
+# publishes that data to a ROS2 topic with an additional toggle button
+
 #This code is the final combined code
 #It combines functionality of the Geiger counter, a toggle switch when the "Enter" key is pressed and sending data through a python socket
 #This will be run on the PiGi Pi5

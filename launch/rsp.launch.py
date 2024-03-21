@@ -1,3 +1,11 @@
+# File: launch_nav2.launch.py
+# Author: Ben Cheshire
+# Date: 21/03/2024
+# Source: Josh Ewans (Articulated Robotics)
+# 
+# Description:
+# This launch file launches the robot state publisher (rsp) to publish the state of the robot to ROS
+
 import os
 
 from ament_index_python.packages import get_package_share_directory

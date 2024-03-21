@@ -1,3 +1,10 @@
+# File: mapper_params_online_async.yaml
+# Author: Ben Cheshire
+# Description: This file is a modified version of the mapper_params_online_async.yaml file from the slam_toolbox repo
+# 
+# Original Author: Steve Macenski
+# Repository: https://github.com/SteveMacenski/slam_toolbox
+
 slam_toolbox:
   ros__parameters:
 

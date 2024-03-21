@@ -1,8 +1,25 @@
+# File: Geiger_socket_receive.py
+# Author: Nathan Leadbetter
+# Date: 21/03/2024
+# Source: OpenAI ChatGPT
+# 
+# Description:
+# This file receives socket data from the PiGi module on a raspberry pi, and
+# publishes that data to a ROS2 topic
+
+"""
+PUBLISHERS:
+  + /count_rate (CountRate) - Radiation count rate in seconds
+
+SUBSCRIBERS:
+  + /pose (PoseWithCovarianceStamped) - The position of the robot in the world
+"""
+
 import socket
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseWithCovarianceStamped
-from pigi_counter.msg import CountRate
+from bunker_mini.msg import CountRate
 
 SERVER_HOST = '192.168.0.103'
 SERVER_PORT = 12345

@@ -1,3 +1,5 @@
+<!-- This file was generated and altered by Ben Cheshire, using the tutorial by Josh Ewans (https://articulatedrobotics.xyz/mobile-robot-full-list/)-->
+
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
     
