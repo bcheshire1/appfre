@@ -1,4 +1,5 @@
 <!-- This file was generated and altered by Ben Cheshire, using the tutorial by Josh Ewans (https://articulatedrobotics.xyz/mobile-robot-full-list/)-->
+<!-- This is where the main robot description is created, and all of the physical parameters of the robot are defined -->
 
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
