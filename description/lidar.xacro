@@ -1,6 +1,3 @@
-<!-- This file was generated and altered by Ben Cheshire, using the tutorial by Josh Ewans (https://articulatedrobotics.xyz/mobile-robot-full-list/)-->
-<!-- A script to define the location, size, and functionality of the lidar sensor used in simulation -->
-
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
@@ -61,3 +58,6 @@
     </gazebo>
 
 </robot>
+
+<!-- This file was generated and altered by Ben Cheshire, using the tutorial by Josh Ewans (https://articulatedrobotics.xyz/mobile-robot-full-list/)-->
+<!-- A script to define the location, size, and functionality of the lidar sensor used in simulation -->
