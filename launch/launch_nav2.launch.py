@@ -19,7 +19,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 
-
+# This function assigns each launch entity to a variable with all the relevant parameters and arguments
 def generate_launch_description():
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -28,6 +28,7 @@ def generate_launch_description():
 
     package_name='bunker_mini'
 
+    # Robot State publisher: publishes the robot's state (position, velocity etc.)
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
@@ -46,6 +47,7 @@ def generate_launch_description():
                                    '-entity', 'bunker_mini'],
                         output='screen')
 
+    # Start RViz2 with the specific setup found in nav2_config.rviz
     rviz2 = Node(
             package='rviz2',
             executable='rviz2',
@@ -54,6 +56,7 @@ def generate_launch_description():
             parameters=[{'use_sim_time': use_sim_time}],
             output='screen')
     
+    # Launches the SLAM toolbox for mapping and localization
     slam_toolbox = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('slam_toolbox'),'launch','online_async_launch.py'
@@ -62,6 +65,7 @@ def generate_launch_description():
                                        }.items()
     )
     
+    # Start navigation2
     navigation2 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('nav2_bringup'),'launch','navigation_launch.py'
