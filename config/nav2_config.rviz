@@ -1,3 +1,5 @@
+# An automatically generated file by RViz2 that defines the configuration to run navigation 2 with explore.py
+
 Panels:
   - Class: rviz_common/Displays
     Help Height: 78
