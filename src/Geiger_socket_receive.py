@@ -17,6 +17,7 @@ SUBSCRIBERS:
 
 import socket
 import rclpy
+import os
 from rclpy.node import Node
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from bunker_mini.msg import CountRate # CountRate is a custom ROS2 message defined in bunker_mini/msg/CountRate.msg
@@ -82,6 +83,12 @@ class PiGiRadiationPublisher(Node):
                 count_msg.x_position = float(self.pose_x)
                 count_msg.y_position = float(self.pose_y)
                 count_msg.count_rate = float(count)
+                # Open the file in append mode
+                package_path = os.path.dirname(os.path.realpath(__file__))
+                file_path = os.path.join(package_path, '..', 'msg', 'Radiation_data.txt')
+                with open(file_path, 'a') as file:
+                    # Write the data to a new line in the file
+                    file.write(f"{count_msg.x_position}, {count_msg.y_position}, {count_msg.count_rate}\n")
                 self.publisher_.publish(count_msg)
         except Exception as e:
             self.get_logger().error(f"Failed to receive data: {e}")
