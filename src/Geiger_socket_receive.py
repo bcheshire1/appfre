@@ -17,7 +17,6 @@ SUBSCRIBERS:
 
 import socket
 import rclpy
-import os
 from rclpy.node import Node
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from bunker_mini.msg import CountRate # CountRate is a custom ROS2 message defined in bunker_mini/msg/CountRate.msg
