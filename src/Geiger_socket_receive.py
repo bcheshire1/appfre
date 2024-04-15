@@ -83,9 +83,7 @@ class PiGiRadiationPublisher(Node):
                 count_msg.x_position = float(self.pose_x)
                 count_msg.y_position = float(self.pose_y)
                 count_msg.count_rate = float(count)
-                # Open the file in append mode
-                package_path = os.path.dirname(os.path.realpath(__file__))
-                file_path = os.path.join(package_path, '..', 'msg', 'Radiation_data.txt')
+                file_path = "./src/appfre/msg/Radiation_Data.txt"
                 with open(file_path, 'a') as file:
                     # Write the data to a new line in the file
                     file.write(f"{count_msg.x_position}, {count_msg.y_position}, {count_msg.count_rate}\n")
