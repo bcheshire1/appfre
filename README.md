@@ -5,7 +5,7 @@ Ensure you have ros2 installed as described in https://docs.ros.org/en/humble/In
 You will also need to install: 
 - SLAM toolbox `sudo apt install slam-toolbox`
 - Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-bringup`
-and others `Add relevant installs here for future use`
+- and others `Add relevant installs here for future use`
 
 Clone this repo into the src directory of your colcon workspace
 ```
