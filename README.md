@@ -14,7 +14,7 @@ Clone this repo into the src directory of your colcon workspace
 mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
 ```
 ```
-git clone https://github.com/bcheshire1/bunker_mini.git
+git clone https://github.com/bcheshire1/appfre.git
 ```
 Build the package using colcon from the root of your workspace
 ```
