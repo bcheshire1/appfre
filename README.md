@@ -6,7 +6,7 @@
 
 You will also need to install: 
 - SLAM toolbox `sudo apt install ros-humble-slam-toolbox`
-- Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-bringup`
+- Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-nav2-bringup`
 - and others `Add relevant installs here for future use`
 
 Clone this repo into the src directory of your colcon workspace
