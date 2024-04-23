@@ -5,7 +5,7 @@
 ---
 
 You will also need to install: 
-- SLAM toolbox `sudo apt install slam-toolbox`
+- SLAM toolbox `sudo apt install ros-humble-slam-toolbox`
 - Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-bringup`
 - and others `Add relevant installs here for future use`
 
