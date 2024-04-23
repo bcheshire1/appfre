@@ -1,7 +1,19 @@
-#Need to install following package
-# pip3 install adafruit-circuitpython-lsm6ds
-#NL has found that this is done within a virtual environment
-#Without this package/library, this current code will not run
+# File: IMU-test.py
+# Author: Nathan Leadbetter 
+# Date: 20/03/2024
+# Source: Adafruit Github
+# 
+# Description:
+# This file prints gyro and accel data from 6 axis
+# Used as a test to ensure the IMU module is functional
+
+'''
+COMMENTS
+Need to install following package
+pip3 install adafruit-circuitpython-lsm6ds
+NL has found that this is done within a virtual environment
+Without this package/library, this current code will not run
+'''
 
 
 
