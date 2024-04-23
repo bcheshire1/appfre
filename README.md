@@ -9,6 +9,8 @@ You will also need to install:
 - Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-nav2-bringup`
 - colcon `sudo apt install python3-colcon-common-extensions`
 - gazebo: Follow instructions at https://gazebosim.org/docs/fortress/install_ubuntu
+- gazebo_ros `sudo apt install ros-humble-gazebo-ros-pkgs`
+- xacro `sudo apt install ros-humble-xacro`  
 - and others `Add relevant installs here for future use`
 
 Clone this repo into the src directory of your colcon workspace
@@ -31,7 +33,7 @@ source install/setup.bash
 ```
 From the root of your workspace, run an example launch file
 ```
-ros2 launch bunker_mini launch_nav2.launch.py world:=./src/bunker_mini/worlds/room.world
+ros2 launch appfre launch_nav2.launch.py world:=./src/appfre/worlds/room.world
 ```
 Then in a new terminal, from the root of your directory again, run the explore.py file to make the robot explore the environment and build up a map using SLAM
 ```
