@@ -1,6 +1,8 @@
 ## Autonomous Path Planning For Radioactive Environments (appfre) using the Bunker Mini robot by AgileX
 
-Ensure you have ros2 installed as described in https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
+**Ensure you have ros2 installed as described in https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html**
+
+---
 
 You will also need to install: 
 - SLAM toolbox `sudo apt install slam-toolbox`
