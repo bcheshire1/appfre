@@ -5,13 +5,11 @@
 ---
 
 You will also need to install: 
-- SLAM toolbox `sudo apt install ros-humble-slam-toolbox`
 - Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-nav2-bringup`
 - colcon `sudo apt install python3-colcon-common-extensions`
 - gazebo: Follow instructions at https://gazebosim.org/docs/fortress/install_ubuntu
 - gazebo_ros `sudo apt install ros-humble-gazebo-ros-pkgs`
 - xacro `sudo apt install ros-humble-xacro`  
-- and others `Add relevant installs here for future use`
 
 Clone this repo into the src directory of your colcon workspace
 ```
