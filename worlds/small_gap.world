@@ -89,7 +89,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='bunker_mini'>
+    <model name='appfre'>
       <link name='base_link'>
         <inertial>
           <pose>0.007917 0 0.14125 0 -0 0</pose>
@@ -485,7 +485,7 @@
       <real_time>127 38257758</real_time>
       <wall_time>1705669256 587088930</wall_time>
       <iterations>123641</iterations>
-      <model name='bunker_mini'>
+      <model name='appfre'>
         <pose>0.89592 1.58402 0.05 0 -0 0.990217</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>

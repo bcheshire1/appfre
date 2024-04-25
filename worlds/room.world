@@ -89,7 +89,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='bunker_mini'>
+    <model name='appfre'>
       <link name='base_link'>
         <inertial>
           <pose>0.007917 0 0.14125 0 -0 0</pose>
@@ -309,7 +309,7 @@
               <resolution>1</resolution>
             </range>
           </ray>
-          <plugin name='laser_controller' filename='./src/bunker_mini/plugins/libgazebo_ros_ray_sensor.so'>
+          <plugin name='laser_controller' filename='./src/appfre/plugins/libgazebo_ros_ray_sensor.so'>
             <ros>
               <argument>~/out:=scan</argument>
             </ros>
@@ -2145,7 +2145,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='bunker_mini'>
+      <model name='appfre'>
         <pose>-0.226293 -0.164884 0.055001 0 3e-06 0.083729</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>

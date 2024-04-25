@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>bunker_mini</name>
+  <name>appfre</name>
   <version>0.0.0</version>
   <description>Package to control and run the Agilex Bunker Mini robot</description>
   <maintainer email="b.cheshire1@lancaster.ac.uk">BEN CHESHIRE</maintainer>

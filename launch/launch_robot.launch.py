@@ -17,7 +17,7 @@ def generate_launch_description():
     
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
 
-    package_name='bunker_mini'
+    package_name='appfre'
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -29,14 +29,14 @@ def generate_launch_description():
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', 'src/bunker_mini/config/nav2_config.rviz'],
+            arguments=['-d', 'src/appfre/config/nav2_config.rviz'],
             parameters=[{'use_sim_time': use_sim_time}],
             output='screen')
     
     slam_toolbox = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('slam_toolbox'),'launch','online_async_launch.py'
-                )]), launch_arguments={'slam_params_file': './src/bunker_mini/config/mapper_params_online_async.yaml',
+                )]), launch_arguments={'slam_params_file': './src/appfre/config/mapper_params_online_async.yaml',
                                        'use_sim_time': use_sim_time,
                                        }.items()
     )
@@ -44,7 +44,7 @@ def generate_launch_description():
     navigation2 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('nav2_bringup'),'launch','navigation_launch.py'
-                )]), launch_arguments={'params_file': './src/bunker_mini/config/nav2_params.yaml',
+                )]), launch_arguments={'params_file': './src/appfre/config/nav2_params.yaml',
                                        }.items()
     )
 
