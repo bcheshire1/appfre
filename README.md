@@ -29,9 +29,9 @@ source install/setup.bash
 ```
 From the root of your workspace, run an example launch file
 ```
-ros2 launch bunker_mini launch_nav2.launch.py world:=./src/bunker_mini/worlds/room.world
+ros2 launch appfre launch_nav2.launch.py world:=./src/bunker_mini/worlds/room.world
 ```
 Then in a new terminal, from the root of your directory again, run the explore.py file to make the robot explore the environment and build up a map using SLAM
 ```
-python3 ./src/bunker_mini/src/explore.py
+python3 ./src/appfre/src/explore.py
 ```
