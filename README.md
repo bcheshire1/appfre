@@ -36,5 +36,5 @@ ros2 launch appfre launch_nav2.launch.py world:=./src/appfre/worlds/room.world
 ```
 Then in a new terminal, from the root of your directory again, run the explore.py file to make the robot explore the environment and build up a map using SLAM
 ```
-python3 ./src/bunker_mini/src/explore.py
+python3 ./src/appfre/src/explore.py
 ```

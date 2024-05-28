@@ -1,0 +1,5 @@
+LIDAR DOCKER RUN
+sudo docker run --rm -it --privileged -v /lib/modules:/lib/modules --network host --name appfreLidar appfre-robot:v1.8 bash
+
+ROBOT DOCKER RUN
+sudo docker run --rm -it --privileged -v /lib/modules:/lib/modules --network host --name appfreRobot appfre-robot:v1.8 bash

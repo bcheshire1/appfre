@@ -20,8 +20,8 @@ import socket
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseWithCovarianceStamped
-from bunker_mini.msg import CountRate
-# CountRate is a custom ROS2 message defined in bunker_mini/msg/CountRate.msg
+from appfre.msg import CountRate
+# CountRate is a custom ROS2 message defined in appfre/msg/CountRate.msg
 
 # Define server address and port
 SERVER_HOST = '192.168.0.103'  # IP for Appfre-PiGI on Appfre-Network
@@ -35,7 +35,7 @@ class PiGiRadiationPublisher(Node):
         super().__init__('pigi_radiation_publisher')
         # Initialize publisher
         self.publisher_ = self.create_publisher(
-            CountRate,  # CountRate is a custom ROS2 message defined in bunker_mini/msg/CountRate.msg
+            CountRate,  # CountRate is a custom ROS2 message defined in appfre/msg/CountRate.msg
             '/count_rate', 
             10)
         # Initialize subscriber

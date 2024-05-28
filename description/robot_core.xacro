@@ -38,7 +38,7 @@
             <geometry>
                 <box size="0.66 0.61 0.281" />
                 <!-- importing a mesh of the bunker mini robot -->
-                <!--mesh filename="package://bunker_mini/description/bunker_mini.stl"/-->
+                <!--mesh filename="package://appfre/description/appfre.stl"/-->
             </geometry>
             <material name="white" />
         </visual>

@@ -26,7 +26,7 @@ def generate_launch_description():
     
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
 
-    package_name='bunker_mini'
+    package_name='appfre'
 
     # Robot State publisher: publishes the robot's state (position, velocity etc.)
     rsp = IncludeLaunchDescription(
@@ -44,7 +44,7 @@ def generate_launch_description():
     # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'bunker_mini'],
+                                   '-entity', 'appfre'],
                         output='screen')
 
     # Start RViz2 with the specific setup found in nav2_config.rviz
@@ -52,7 +52,7 @@ def generate_launch_description():
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', 'src/bunker_mini/config/nav2_config.rviz'],
+            arguments=['-d', 'src/appfre/config/nav2_config.rviz'],
             parameters=[{'use_sim_time': use_sim_time}],
             output='screen')
     
@@ -60,7 +60,7 @@ def generate_launch_description():
     slam_toolbox = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('slam_toolbox'),'launch','online_async_launch.py'
-                )]), launch_arguments={'slam_params_file': './src/bunker_mini/config/mapper_params_online_async.yaml',
+                )]), launch_arguments={'slam_params_file': './src/appfre/config/mapper_params_online_async.yaml',
                                        'use_sim_time': use_sim_time,
                                        }.items()
     )
@@ -69,7 +69,7 @@ def generate_launch_description():
     navigation2 = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory('nav2_bringup'),'launch','navigation_launch.py'
-                )]), launch_arguments={'params_file': './src/bunker_mini/config/nav2_params.yaml',
+                )]), launch_arguments={'params_file': './src/appfre/config/nav2_params.yaml',
                                        }.items()
     )
 
