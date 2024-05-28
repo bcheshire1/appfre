@@ -5,7 +5,8 @@
 ---
 
 You will also need to install: 
-- Nav2 `sudo apt install \ ros-humble-navigation2 \ ros-humble-nav2-bringup`
+- Nav2 `sudo apt install ros-humble-navigation2`
+- `sudo apt install ros-humble-nav2-bringup`
 - colcon `sudo apt install python3-colcon-common-extensions`
 - gazebo: Follow instructions at https://gazebosim.org/docs/fortress/install_ubuntu
 - gazebo_ros `sudo apt install ros-humble-gazebo-ros-pkgs`
