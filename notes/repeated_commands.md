@@ -14,4 +14,7 @@
 3. `sudo docker run --rm -it --privileged -v /lib/modules:/lib/modules --network host --name appfreLidar appfre-robot:v1.8 bash`
 4. `source install/setup.bash`
 5. `source ./src/rplidar_ros/scripts/create_udev_rules.sh` (From ros2_ws directory, don't worry about any unrecognized services, or commands not found)
-6. `ros2 launch rplidar_ros rplidar_a2m12_launch.py`
+6. `ros2 launch rplidar_ros rplidar_a2m12_launch.py frame_id:=laser_frame`
+
+# Map Saver
+`ros2 run nav2_map_server map_saver_cli`
