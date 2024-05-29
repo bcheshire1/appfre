@@ -1,5 +1,5 @@
 # Robot commands
-1. ssh in to the RasPi `ssh appfre_robot@192.168.0.100` (192.168.0.100 is IP address for appfre_network)
+1. ssh in to the RasPi: `ssh appfre_robot@192.168.0.100` (192.168.0.100 is IP address for appfre_network)
 2. `cd docker`
 3. `sudo docker run --rm -it --privileged -v /lib/modules:/lib/modules --network host --name appfreRobot appfre-robot:v1.8 bash`
 4. `source install/setup.bash`
@@ -9,7 +9,7 @@
 8. `ros2 launch bunker_base bunker_base.launch.py`
 
 # LIDAR commands
-1. ssh in to the RasPi `ssh appfre_robot@192.168.0.100` (192.168.0.100 is IP address for appfre_network)
+1. ssh in to the RasPi: `ssh appfre_robot@192.168.0.100` (192.168.0.100 is IP address for appfre_network)
 2. `cd docker`
 3. `sudo docker run --rm -it --privileged -v /lib/modules:/lib/modules --network host --name appfreLidar appfre-robot:v1.8 bash`
 4. `source install/setup.bash`
@@ -17,7 +17,10 @@
 6. `ros2 launch rplidar_ros rplidar_a2m12_launch.py frame_id:=laser_frame`
 
 # PiGI commands
-1. ssh into the RasPi `ssh appfre@192.168.0.103` (192.168.0.103 is IP address for appfre_network)
+1. ssh into the RasPi: `ssh appfre@192.168.0.103` (192.168.0.103 is IP address for appfre_network)
+2. Run Geiger.py script: `python3 Geiger.py`
 
 ## Map Saver
-`ros2 run nav2_map_server map_saver_cli`
+```
+ros2 run nav2_map_server map_saver_cli
+```
