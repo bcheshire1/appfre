@@ -44,13 +44,13 @@ class PiGiRadiationPublisher(Node):
         self.publisher_ = self.create_publisher(
             CountRate,  # CountRate is a custom ROS2 message defined in appfre/msg/CountRate.msg
             '/count_rate', 
-            10)
+            5)
         # Initialize subscriber
         self.pose_subscription = self.create_subscription(
             PoseWithCovarianceStamped, 
             '/pose', 
             self.pose_callback, 
-            10)
+            5)
         # Setup a timer for other periodic tasks
         self.timer = self.create_timer(1, self.timer_callback)  # 1-second timer
         self.client_socket = None
