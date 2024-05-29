@@ -93,8 +93,8 @@ class PiGiRadiationPublisher(Node):
                 count_msg.count_rate = float(count)
 
                 with open(FILEPATH, 'a') as file:
-                	#Write the data to a new line in a new file
-                	file.write(f"{count_msg.x_position}, {count_msg.y_position}, {count_msg.count_rate}\n")
+                    # Write the data to a new line in a new file
+                    file.write(f"{count_msg.x_position}, {count_msg.y_position}, {count_msg.count_rate}\n")
 
                 self.publisher_.publish(count_msg)
             else:
