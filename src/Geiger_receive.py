@@ -16,6 +16,7 @@ SUBSCRIBERS:
   + /pose (PoseWithCovarianceStamped) - The position of the robot in the world
 """
 
+import datetime
 import socket
 import rclpy
 from rclpy.node import Node
@@ -23,15 +24,21 @@ from geometry_msgs.msg import PoseWithCovarianceStamped
 from appfre.msg import CountRate
 # CountRate is a custom ROS2 message defined in appfre/msg/CountRate.msg
 
+current_datetime = datetime.datetime.now()
+current_date = current_datetime.date()
+current_time = current_datetime.time()
+
 # Define server address and port
-SERVER_HOST = '192.168.0.103'  # IP for Appfre-PiGI on Appfre-Network
+SERVER_HOST = '192.168.186.82'  # IP for Appfre-PiGI on Appfre-Network
 SERVER_PORT = 12345 #Must be the same defined on server side
+FILEPATH = f"Radiation_Data_{current_date}_{current_time}.txt"
 
 # Define the ROS2 node that contains all functionality of the script
 class PiGiRadiationPublisher(Node):
 
 	# Define __init__ function to initialize all variables and create publishers and subscribers
     def __init__(self):
+
         super().__init__('pigi_radiation_publisher')
         # Initialize publisher
         self.publisher_ = self.create_publisher(
@@ -84,10 +91,11 @@ class PiGiRadiationPublisher(Node):
                 count_msg.x_position = float(self.pose_x)
                 count_msg.y_position = float(self.pose_y)
                 count_msg.count_rate = float(count)
-                file_path = "Radiation_Data.txt"
-                with open(file_path, 'a') as file:
+
+                with open(FILEPATH, 'a') as file:
                 	#Write the data to a new line in a new file
                 	file.write(f"{count_msg.x_position}, {count_msg.y_position}, {count_msg.count_rate}\n")
+
                 self.publisher_.publish(count_msg)
             else:
                 self.client_socket.close()
