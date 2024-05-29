@@ -38,3 +38,10 @@ Then in a new terminal, from the root of your directory again, run the explore.p
 ```
 python3 ./src/appfre/src/explore.py
 ```
+---
+**Launching the real-world robot code**
+
+To run ROS2 on the Bunker Mini robot, launch the `launch_robot.launch.py` file using:
+```
+ros2 launch appfre launch_robot.launch.py
+```
