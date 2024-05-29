@@ -1,8 +1,3 @@
-- [Robot commands](#robot-commands)
-- [LIDAR commands](#lidar-commands)
-
----
-
 # Robot commands
 1. ssh in to the RasPi `ssh appfre_robot@192.168.XXX.XXX`
 2. `cd docker`
