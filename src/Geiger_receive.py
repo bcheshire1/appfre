@@ -29,9 +29,9 @@ current_date = current_datetime.date()
 current_time = current_datetime.time()
 
 # Define server address and port
-SERVER_HOST = '192.168.186.82'  # IP for Appfre-PiGI on Appfre-Network
+SERVER_HOST = '192.168.0.103'  # IP for Appfre-PiGI on Appfre-Network
 SERVER_PORT = 12345 #Must be the same defined on server side
-FILEPATH = f"Radiation_Data_{current_date}_{current_time}.txt"
+FILEPATH = f"/home/appfrebase/appfre_ws/src/appfre/rad_data/Radiation_Data_{current_date}_{current_time}.txt"
 
 # Define the ROS2 node that contains all functionality of the script
 class PiGiRadiationPublisher(Node):
