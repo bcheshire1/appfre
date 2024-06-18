@@ -18,8 +18,8 @@
 
 # PiGI commands
 1. ssh into the RasPi: `ssh appfre@192.168.0.103` (192.168.0.103 is IP address for appfre_network)
-2. Run Geiger.py script on the Robot RasPi: `python3 Geiger.py`
-3. Run Geiger_receive.py file on the base PC `python3 Geiger_receive.py` (from the src directory)
+2. Run Geiger.py script on the robot RasPi: `python3 Geiger.py`
+3. Run Geiger_receive.py on the Base PC: `python3 Geiger_receive.py` (fromt the src directory)
 
 ## Map Saver
 ```
