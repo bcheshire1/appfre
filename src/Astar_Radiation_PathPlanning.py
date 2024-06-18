@@ -5,6 +5,12 @@
 # 
 # Description:
 # This script is used to implement the A* path planning algorithm with radiation costmap
+# 
+# ReadMe:
+# obs_file_path: Path to the occupancy grid file - Needs to be a pgm format map showing the obstacles
+# (can be the direct output from the map_saver node in ROS)
+# rad_file_path: Path to the radiation costmap file - Needs to be a pgm format map showing the radiation levels
+# (needs to be the output from the GP Regression script)
 
 import numpy as np
 import cv2
